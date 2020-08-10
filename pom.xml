@@ -4,7 +4,7 @@
   <groupId>devops.ilp1</groupId>
   <artifactId>ILP</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <name>ILP1UserMgmt Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -135,8 +135,9 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-					<port>6080</port>
-					<path>/ILP_Bookstore</path>
+					<port>5050</port>
+
+					<path>/ILP1dem</path>
 				</configuration>
 				<executions>
 					<execution>
@@ -203,7 +204,7 @@
 					<configuration>
 						<url>http://localhost:5050/manager/text</url>
 						<server>myserver</server>
-						<path>/ILP_Bookstore</path>
+						<path>/ILP1dem</path>
                    		 <update>true</update>
                    		 <username>admin</username>
                    		 <password>admin</password>
@@ -228,4 +229,11 @@
 
 	
 	</build> 
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>raj-releases</name>
+        <url>http://localhost:8081/artifactory/libs-release</url>
+    </repository>
+</distributionManagement>
 </project>
